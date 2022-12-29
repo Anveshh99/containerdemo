@@ -1,7 +1,8 @@
-FROM node:12
+FROM node
 WORKDIR /app
 COPY package.json /app
 RUN npm install
 COPY . /app
+CMD node server.js
 EXPOSE 8001
-CMD ["node","server.js"]
+
